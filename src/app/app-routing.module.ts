@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CountriesComponent,
   },
   {
-    path: 'country',
+    path: 'countries/:id',
     component: CountryComponent,
   },
 ];
