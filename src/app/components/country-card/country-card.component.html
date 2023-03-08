@@ -1,1 +1,18 @@
-<p>country-card works!</p>
+<div class="w-full p-6 drop-shadow bg-white rounded-md">
+  <img [src]="data.flag" [alt]="data.flag" class="w-full aspect-video border border-black/10">
+  <div class="text-lg my-4">{{ data.name }}</div>
+  <div class="flex flex-col gap-y-3">
+    <div class="flex justify-between items-center">
+      <span class="opacity-60 text-md">Population</span>
+      <span class="font-medium">{{ data.population }}</span>
+    </div>
+    <div class="flex justify-between items-center">
+      <span class="opacity-60 text-md">Region</span>
+      <span class="font-medium">{{ data.region }}</span>
+    </div>
+    <div class="flex justify-between items-center">
+      <span class="opacity-60 text-md">Capital</span>
+      <span class="font-medium text-md">{{ data.capital }}</span>
+    </div>
+  </div>
+</div>

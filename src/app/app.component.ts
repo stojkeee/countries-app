@@ -4,11 +4,12 @@ import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import { LoaderService } from './services/loader.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatProgressBarModule],
+  imports: [CommonModule, RouterModule, MatProgressBarModule, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
