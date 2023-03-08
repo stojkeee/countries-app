@@ -1,11 +1,16 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
 import { ResReqInterceptor } from './app/core/res-req.interceptor';
+import { environment } from './environment/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
 
 bootstrapApplication(AppComponent, {
   providers: [
